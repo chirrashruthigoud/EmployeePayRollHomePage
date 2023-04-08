@@ -31,9 +31,40 @@
                 Employee Details <div class="emp-count">10</div>
             </div>
             <a href="./new_payroll_form.html" class="add-button">
-                <img src="../Assets\icons\add-24px.svg" alt="">Add User
+                <img src="./Assets\icons\add-24px.svg" alt="">Add User
             </a>
         </div><!-- header-content-->
+        <div class="table-main">
+            <table id="table-display" class="table">
+                <!-- UC3-Display Employee Details in Tabular Format-->
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td><img class="profile" src="./Assets\E3.png" alt="profile_image"></td>
+                    <td>Bruce Wayne</td>
+                    <td>Male</td>
+                    <td>
+                        <div class="dept-label">HR</div>
+                        <div class="dept-label">Finance</div>
+                    </td>
+                    <td>3000000</td>
+                    <td>12 May 2023</td>
+                    <td class="action">
+                        <img src="./Assets\icon\delete-black-18dp.svg" alt="delete" id="1" onclick="remove(this)">
+                        <img src="./Assets\icon\create-black-18dp.svg" alt="edit" id="1" onclick="update(this)">
+                    </td>
+                </tr>
+            </table>
+        </div><!--table-main-->
+    </div><!--main-content-->
 </body>
+
 
 </html>
