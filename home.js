@@ -1,6 +1,13 @@
+let empPayrollList;
 window.addEventListener('DOMContentLoaded', (event) => {
+    empPayrollList = getEmployeePayrollDataFromStorage();
+    document.querySelector(".emp-count").textContent = empPayrollList.length;
     createInnerHtml();
 });
+const getEmployeePayrollDataFromStorage = () => {
+    return localStorage.getItem('EmployeePayrollList') ?
+        JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
+}
 
 const createInnerHtml = () => {
     const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>" +
@@ -18,9 +25,9 @@ const createInnerHtml = () => {
             <td>${empPayrollData._salary}</td>
             <td>${empPayrollData._startDate}</td>
             <td>
-                 <img src="./Assets\icon\delete-black-18dp.svg" alt="delete" id="1" onclick="remove(this)">
-                <img src="./Assets\icon\create-black-18dp.svg" alt="edit" id="1" onclick="update(this)">
-            </td>
+            <img name="${empPayrollData._id}" onclick="remove(this)"src="./Assets/icon/delete-black-18dp.svg" alt="delete">
+          <img name="${empPayrollData._id}" onclick="update(this)" src="./Assets/icon/create-black-18dp.svg" alt="edit" >
+                    </td>
          </tr>
                 `;
     }
@@ -35,11 +42,11 @@ const createEmployeePayrollJSON = () => {
                 'Engineering',
                 'Finance'
             ],
-            _salary: '600000',
-            _startDate: '12 may 2020',
+            _salary: '500000',
+            _startDate: '22 may 2019',
             _note: '',
             _id: new Date().getTime(),
-            _profilePic: './Assets/E2.png'
+            _profilePic: './Assets/E5.png'
         },
         {
             _name: 'Omkar Mane',
@@ -47,11 +54,11 @@ const createEmployeePayrollJSON = () => {
             _department: [
                 'Sales'
             ],
-            _salary: '400000',
+            _salary: '300000',
             _startDate: '29 Oct 2019',
             _note: '',
             _id: new Date().getTime() + 1,
-            _profilePic: './Assets/E5.png'
+            _profilePic: './Assets/E2.png'
 
         }
     ];
@@ -65,4 +72,12 @@ const getDeptHtml = (deptList) => {
     }
 
     return deptHtml;
+}
+
+
+const remove = (node)=>{
+    let employeePayrollData = empPayrollList.find(empData => empData._id == node.id);
+    if(!empPayrollData) return;
+    const index = empPayrollList.map(empData => empData._id).indexOf(employeePayrollData._id);
+    empPayrollList
 }
