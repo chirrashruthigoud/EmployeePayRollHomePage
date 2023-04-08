@@ -1,0 +1,52 @@
+{
+    "employee": [
+      {
+        "name": "Shruthi new",
+        "gender": "Female",
+        "departMent": [
+          "HR"
+        ],
+        "salary": "30000",
+        "startDate": "1 Jan 2020",
+        "notes": "",
+        "id": 1604589551457,
+        "profileUrl": "../E1.png"
+      },
+      {
+        "name": "Rakesh Guntuku test",
+        "gender": "Male",
+        "departMent": [
+          "HR"
+        ],
+        "salary": "30000",
+        "startDate": "1 Jan 2020",
+        "notes": "",
+        "id": 1604589594363,
+        "profileUrl": "../E2.png"
+      },
+      {
+        "name": "Sunny",
+        "gender": "Male",
+        "departMent": [
+          "HR"
+        ],
+        "salary": "30000",
+        "startDate": "1 Jan 2020",
+        "notes": "",
+        "id": 1604589699566,
+        "profileUrl": "../E3.png"
+      },
+      {
+        "name": "Kirthi",
+        "gender": "Male",
+        "departMent": [
+          "HR"
+        ],
+        "salary": "30000",
+        "startDate": "1 Jan 2020",
+        "notes": "",
+        "id": 1604589731061,
+        "profileUrl": "../E8.png"
+      }
+    ]
+  }
