@@ -35,8 +35,8 @@ const createEmployeePayrollJSON = () => {
                 'Engineering',
                 'Finance'
             ],
-            _salary: '500000',
-            _startDate: '22 may 2019',
+            _salary: '600000',
+            _startDate: '12 may 2020',
             _note: '',
             _id: new Date().getTime(),
             _profilePic: './Assets/E2.png'
@@ -47,7 +47,7 @@ const createEmployeePayrollJSON = () => {
             _department: [
                 'Sales'
             ],
-            _salary: '300000',
+            _salary: '400000',
             _startDate: '29 Oct 2019',
             _note: '',
             _id: new Date().getTime() + 1,
